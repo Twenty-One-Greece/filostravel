@@ -1,0 +1,114 @@
+Application path: /livechat/php/app.php?install-wizard-2
+2017-04-20 08:21:29 [error] SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO)
+Stack trace:
+/home/runcloud/webapps/filostravel/livechat/php/service/Database.php:46 (Logger:error())
+/home/runcloud/webapps/filostravel/livechat/php/service/Database.php:64 (Database:connect())
+/home/runcloud/webapps/filostravel/livechat/php/service/Database.php:25 (Database:reconnect())
+/home/runcloud/webapps/filostravel/livechat/php/lib/Service.php:17 (Database:onRegister())
+/home/runcloud/webapps/filostravel/livechat/php/lib/ServiceContainer.php:47 (Service:setServiceContainer())
+/home/runcloud/webapps/filostravel/livechat/php/lib/Controller.php:33 (ServiceContainer:get())
+/home/runcloud/webapps/filostravel/livechat/php/controller/InstallController.php:74 (Controller:get())
+/home/runcloud/webapps/filostravel/livechat/php/app/Application.php:155 (InstallController:wizard2Action())
+/home/runcloud/webapps/filostravel/livechat/php/app/Application.php:79 (Application:runAction())
+/home/runcloud/webapps/filostravel/livechat/php/app.php:27 (Application:run())
+
+2017-04-20 08:21:29 [error] SQLSTATE[HY000] [1045] Access denied for user 'filostravel'@'localhost' (using password: YES)
+Stack trace:
+/home/runcloud/webapps/filostravel/livechat/php/service/Database.php:46 (Logger:error())
+/home/runcloud/webapps/filostravel/livechat/php/controller/InstallController.php:74 (Database:connect())
+/home/runcloud/webapps/filostravel/livechat/php/app/Application.php:155 (InstallController:wizard2Action())
+/home/runcloud/webapps/filostravel/livechat/php/app/Application.php:79 (Application:runAction())
+/home/runcloud/webapps/filostravel/livechat/php/app.php:27 (Application:run())
+
+Application path: /livechat/php/app.php?install-wizard-2
+2017-04-20 08:21:29 Undefined index: smtp on line 162 in /home/runcloud/webapps/filostravel/livechat/views/admin/install-wizard.html
+Application path: /livechat/php/app.php?install-wizard-2
+2017-04-20 08:21:42 Undefined index: smtp on line 162 in /home/runcloud/webapps/filostravel/livechat/views/admin/install-wizard.html
+Application path: /livechat/php/app.php?install-wizard-2
+2017-04-20 08:22:03 Undefined index: smtp on line 162 in /home/runcloud/webapps/filostravel/livechat/views/admin/install-wizard.html
+Application path: /livechat/php/app.php?install-wizard-2
+2017-04-20 08:22:29 [error] SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO)
+Stack trace:
+/home/runcloud/webapps/filostravel/livechat/php/service/Database.php:46 (Logger:error())
+/home/runcloud/webapps/filostravel/livechat/php/service/Database.php:64 (Database:connect())
+/home/runcloud/webapps/filostravel/livechat/php/service/Database.php:25 (Database:reconnect())
+/home/runcloud/webapps/filostravel/livechat/php/lib/Service.php:17 (Database:onRegister())
+/home/runcloud/webapps/filostravel/livechat/php/lib/ServiceContainer.php:47 (Service:setServiceContainer())
+/home/runcloud/webapps/filostravel/livechat/php/lib/Controller.php:33 (ServiceContainer:get())
+/home/runcloud/webapps/filostravel/livechat/php/controller/InstallController.php:74 (Controller:get())
+/home/runcloud/webapps/filostravel/livechat/php/app/Application.php:155 (InstallController:wizard2Action())
+/home/runcloud/webapps/filostravel/livechat/php/app/Application.php:79 (Application:runAction())
+/home/runcloud/webapps/filostravel/livechat/php/app.php:27 (Application:run())
+
+Application path: /livechat/php/app.php?install-wizard-2
+2017-04-20 08:22:30 Undefined index: smtp on line 78 in /home/runcloud/webapps/filostravel/livechat/views/admin/install-wizard-2.html
+2017-04-20 08:22:30 Undefined index: smtp on line 151 in /home/runcloud/webapps/filostravel/livechat/views/admin/install-wizard-2.html
+Application path: /livechat/php/app.php?operator-get-typing-status
+2017-04-20 08:27:38 parse_ini_file(/home/runcloud/webapps/filostravel/livechat/php/../data/memory.dat): failed to open stream: No such file or directory on line 97 in /home/runcloud/webapps/filostravel/livechat/php/service/Memory.php
+Application path: /livechat/php/app.php?operator-get-typing-status
+2017-04-20 08:27:43 parse_ini_file(/home/runcloud/webapps/filostravel/livechat/php/../data/memory.dat): failed to open stream: No such file or directory on line 97 in /home/runcloud/webapps/filostravel/livechat/php/service/Memory.php
+Application path: /livechat/php/app.php?operator-get-typing-status
+2017-04-20 08:27:48 parse_ini_file(/home/runcloud/webapps/filostravel/livechat/php/../data/memory.dat): failed to open stream: No such file or directory on line 97 in /home/runcloud/webapps/filostravel/livechat/php/service/Memory.php
+Application path: /livechat/php/app.php?operator-get-typing-status
+2017-04-20 08:27:53 parse_ini_file(/home/runcloud/webapps/filostravel/livechat/php/../data/memory.dat): failed to open stream: No such file or directory on line 97 in /home/runcloud/webapps/filostravel/livechat/php/service/Memory.php
+Application path: /livechat/php/app.php?operator-get-typing-status
+2017-04-20 08:27:58 parse_ini_file(/home/runcloud/webapps/filostravel/livechat/php/../data/memory.dat): failed to open stream: No such file or directory on line 97 in /home/runcloud/webapps/filostravel/livechat/php/service/Memory.php
+Application path: /livechat/php/app.php?contact
+2017-04-20 08:28:01 [error] Could not instantiate mail function.
+Debug information:
+
+
+Stack trace:
+/home/runcloud/webapps/filostravel/livechat/php/service/Mailer.php:51 (Logger:error())
+/home/runcloud/webapps/filostravel/livechat/php/controller/ContactController.php:36 (Mailer:sendMessage())
+/home/runcloud/webapps/filostravel/livechat/php/app/Application.php:155 (ContactController:contactAction())
+/home/runcloud/webapps/filostravel/livechat/php/app/Application.php:79 (Application:runAction())
+/home/runcloud/webapps/filostravel/livechat/php/app.php:27 (Application:run())
+
+Application path: /livechat/php/app.php?operator-get-typing-status
+2017-04-20 08:28:03 parse_ini_file(/home/runcloud/webapps/filostravel/livechat/php/../data/memory.dat): failed to open stream: No such file or directory on line 97 in /home/runcloud/webapps/filostravel/livechat/php/service/Memory.php
+Application path: /livechat/php/app.php?operator-get-typing-status
+2017-04-20 08:28:08 parse_ini_file(/home/runcloud/webapps/filostravel/livechat/php/../data/memory.dat): failed to open stream: No such file or directory on line 97 in /home/runcloud/webapps/filostravel/livechat/php/service/Memory.php
+Application path: /livechat/php/app.php?operator-get-typing-status
+2017-04-20 08:28:13 parse_ini_file(/home/runcloud/webapps/filostravel/livechat/php/../data/memory.dat): failed to open stream: No such file or directory on line 97 in /home/runcloud/webapps/filostravel/livechat/php/service/Memory.php
+Application path: /livechat/php/app.php?operator-get-typing-status
+2017-04-20 08:28:18 parse_ini_file(/home/runcloud/webapps/filostravel/livechat/php/../data/memory.dat): failed to open stream: No such file or directory on line 97 in /home/runcloud/webapps/filostravel/livechat/php/service/Memory.php
+Application path: /livechat/php/app.php?operator-get-typing-status
+2017-04-20 08:28:23 parse_ini_file(/home/runcloud/webapps/filostravel/livechat/php/../data/memory.dat): failed to open stream: No such file or directory on line 97 in /home/runcloud/webapps/filostravel/livechat/php/service/Memory.php
+Application path: /livechat/php/app.php?operator-get-typing-status
+2017-04-20 08:28:28 parse_ini_file(/home/runcloud/webapps/filostravel/livechat/php/../data/memory.dat): failed to open stream: No such file or directory on line 97 in /home/runcloud/webapps/filostravel/livechat/php/service/Memory.php
+Application path: /livechat/php/app.php?operator-get-typing-status
+2017-04-20 08:28:33 parse_ini_file(/home/runcloud/webapps/filostravel/livechat/php/../data/memory.dat): failed to open stream: No such file or directory on line 97 in /home/runcloud/webapps/filostravel/livechat/php/service/Memory.php
+Application path: /livechat/php/app.php?operator-get-typing-status
+2017-04-20 08:28:38 parse_ini_file(/home/runcloud/webapps/filostravel/livechat/php/../data/memory.dat): failed to open stream: No such file or directory on line 97 in /home/runcloud/webapps/filostravel/livechat/php/service/Memory.php
+Application path: /livechat/php/app.php?operator-update-typing-status
+2017-04-20 08:28:41 parse_ini_file(/home/runcloud/webapps/filostravel/livechat/php/../data/memory.dat): failed to open stream: No such file or directory on line 97 in /home/runcloud/webapps/filostravel/livechat/php/service/Memory.php
+2017-04-20 08:28:41 parse_ini_file(/home/runcloud/webapps/filostravel/livechat/php/../data/memory.dat): failed to open stream: No such file or directory on line 97 in /home/runcloud/webapps/filostravel/livechat/php/service/Memory.php
+2017-04-20 08:28:41 array_merge(): Argument #1 is not an array on line 102 in /home/runcloud/webapps/filostravel/livechat/php/service/Memory.php
+2017-04-20 08:28:41 array_keys() expects parameter 1 to be array, boolean given on line 104 in /home/runcloud/webapps/filostravel/livechat/php/service/Memory.php
+2017-04-20 08:28:41 Invalid argument supplied for foreach() on line 104 in /home/runcloud/webapps/filostravel/livechat/php/service/Memory.php
+2017-04-20 08:28:41 Invalid argument supplied for foreach() on line 79 in /home/runcloud/webapps/filostravel/livechat/php/service/Memory.php
+Application path: /livechat/php/app.php?contact
+2017-04-21 08:27:31 [error] Could not instantiate mail function.
+Debug information:
+
+
+Stack trace:
+/home/runcloud/webapps/filostravel/livechat/php/service/Mailer.php:51 (Logger:error())
+/home/runcloud/webapps/filostravel/livechat/php/controller/ContactController.php:36 (Mailer:sendMessage())
+/home/runcloud/webapps/filostravel/livechat/php/app/Application.php:155 (ContactController:contactAction())
+/home/runcloud/webapps/filostravel/livechat/php/app/Application.php:79 (Application:runAction())
+/home/runcloud/webapps/filostravel/livechat/php/app.php:27 (Application:run())
+
+Application path: /livechat/php/app.php?contact
+2017-04-21 14:52:28 [error] Could not instantiate mail function.
+Debug information:
+
+
+Stack trace:
+/home/runcloud/webapps/filostravel/livechat/php/service/Mailer.php:51 (Logger:error())
+/home/runcloud/webapps/filostravel/livechat/php/controller/ContactController.php:36 (Mailer:sendMessage())
+/home/runcloud/webapps/filostravel/livechat/php/app/Application.php:155 (ContactController:contactAction())
+/home/runcloud/webapps/filostravel/livechat/php/app/Application.php:79 (Application:runAction())
+/home/runcloud/webapps/filostravel/livechat/php/app.php:27 (Application:run())
+

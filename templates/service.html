@@ -1,0 +1,244 @@
+<!-- Header Carousel -->
+<div class="test">
+    <img class="img-responsive img-service-header" ng-src="http://my.twenty-one.co/uploads/services/{{service.images[service.featuredImage].fileName}}" alt="">
+    <!--<div class="test-fasa-leukh"></div><div class="test-fasa-ble"></div>
+    
+    <div class="container container-beta"><h1 class="title-fasa fasa-title">{{service.title}}</h1></div>
+    <div class="container container-beta"><h1 class="title-fasa price-fasa"><span class="starting-at-span">starting at:</span>{{service.price}}€</h1></div> -->
+    <!--<div class="col-sm-6 tsiou tsiou-left"><div class="container container-beta"><h1 class="title-fasa fasa-title">{{service.title}}</h1></div></div>
+    <div class="col-sm-6 tsiou tsiou-right"><h1 class="title-fasa price-fasa"><span class="starting-at-span">starting at:</span>{{service.price}}€</h1></div>-->
+</div>
+
+<!-- Page Content -->
+<!--<div class="container-fluid">-->
+
+<div class="section dest-page-content">
+    <div class="container container-beta">
+
+        <div class="row test3-row">
+            <div class="col-sm-8 tsiou tsiou-left">
+                <h1 class="title-fasa fasa-title">{{service.title}}</h1>
+            </div>
+            <div class="col-sm-4 tsiou tsiou-right">
+                <h1 class="title-fasa price-fasa"><span class="starting-at-span">price starting at</span> {{service.price}}€</h1>
+            </div>
+        </div>
+
+        <div class="col-sm-8 main-page-content main-page-content-2">
+            <div class="page-intro">
+                <div class="tour-section-1">
+                    <!--<h2 class="holiday-packages">{{service.title}}</h2>-->
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <h3 class="holiday-duration-infos"> <span class="holiday-duration-span"><b>Duration:</b> </span></h3>
+                            <span class="excursion-info"> {{service.duration}}</span>
+                        </div>
+                        <div class="col-sm-4">
+                            <h3 class="holiday-duration-infos"> <span class="holiday-duration-span"><b>Type:</b> </span></h3>
+                            <span class="excursion-info"> {{service.type}}</span>
+                        </div>
+                        <div class="col-sm-4 ">
+                            <h3 class="holiday-duration-infos"> <span class="holiday-duration-span"><b>Category:</b> </span> </h3>
+                            <a href="#"><span class="excursion-info" ng-repeat="cat in service.category">{{cat}} &nbsp;</a></span>
+                        </div>
+                    </div>
+                    <!-- Nav tabs -->
+                    <ul class="nav nav-tabs excursion-tabs" role="tablist">
+                        <li role="presentation" class="active axpill"><a data-target="#highlights" aria-controls="highlights" role="tab" data-toggle="tab">Info</a></li>
+                        <li role="presentation" class="axpill"><a data-target="#itinerary" aria-controls="itinerary" role="tab" data-toggle="tab">Itinerary</a></li>
+                        <li role="presentation" class="axpill"><a data-target="#bookNow" aria-controls="bookNow" role="tab" data-toggle="tab">What is included</a></li>
+                        <li role="presentation" class="axpill"><a data-target="#departures" aria-controls="departures" role="tab" data-toggle="tab">Departures</a></li>
+                        <!--<li role="presentation"><a data-target="#review" aria-controls="review" role="tab" data-toggle="tab">Reviews</a></li>-->
+                        <!--<li role="presentation" class="axpill"><a data-target="#map" aria-controls="map" role="tab" data-toggle="tab">Map</a></li>-->
+                    </ul>
+
+                    <!-- Tab panes -->
+                    <div class="tab-content">
+                        <div role="tabpanel" class="tab-pane active" id="highlights">
+                            <h2 class="tours-h2">Tour Highlights</h2>
+                            <p class="tours-p">{{service.description}}</p>
+                            <h2 class="tours-h2">Photo Gallery</h2>
+                            <div class="row">
+                                <div class="col-xs-6 col-sm-4 service-img" ng-repeat="image in service.images" ng-click="getImageIndex($index)" data-toggle="modal" data-target="#myModal">
+                                    <img class="img-responsive tour-images" ng-src='http://my.twenty-one.co/uploads/services/{{image.fileName}}' alt="" />
+                                </div>
+                            </div>
+                        </div>
+
+                        <div role="tabpanel" class="tab-pane" id="itinerary">
+                            <h2 class="tours-h2">Tour Highlights</h2>
+                            <div class="row">
+                                <div ng-repeat="schedule in service.schedule" class="col-xs-12">
+                                    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading" role="tab" id="heading{$index}}">
+                                                <h4 class="panel-title">
+                                                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" data-target="#collapse{{$index}}" aria-expanded="true" aria-controls="collapseTwo">
+                                                        <p class="tours-p">{{schedule.title}}</p>
+                                                    </a>
+                                                </h4>
+                                            </div>
+                                            <div id="collapse{{$index}}" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading{$index}}">
+                                                <div class="panel-body">
+                                                    <p class="tours-p">{{schedule.description}}</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--<div role="tabpanel" class="tab-pane" id="guides">...</div>-->
+                        <div role="tabpanel" class="tab-pane" id="bookNow">
+                            <h2 class="tours-h2 include">Includes</h2>
+                            <div class="includes">
+                                <p class="tours-p">{{service.includes}}</p>
+                            </div>
+                            <hr>
+                            <h2 class="tours-h2 include">Not Includes</h2>
+                            <div class="includes">
+                                <p class="tours-p">{{service.notIncludes}}</p>
+                            </div>
+                        </div>
+
+                        <div role="tabpanel" class="tab-pane" id="departures">
+                            <h2 class="tours-h2 include">Departures</h2>
+                            <h3 class="">Every: <span ng-repeat="day in service.departureDays">{{day}} </span></h3>
+                            <h2 class="tours-h2 include departures">
+                                <p class="tours-p">{{service.startDate}} to {{service.endDate}}</p>
+                            </h2>
+                        </div>
+                        <div role="tabpanel" class="tab-pane" id="map">
+                            <div id="map" style="width:100%;height:400px">
+                                <!--Map here-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- SECTION 1 -->
+
+                <!-- SECTION 2 -->
+                <div class="tour-section-2">
+
+                </div>
+                <!-- SECTION 2 -->
+            </div>
+        </div>
+        <!-- MAIN CONTENT -->
+
+        <!-- SIDEBAR -->
+        <div class="col-sm-4 sidebar">
+            <div class="sidebar-section-1">
+                <p class="holiday-package-price">BOOK THIS TOUR</p>
+            </div>
+            <div class="sidebar-section-2" ng-if="service.product === 'Package'">
+                <div>
+                    <!--<form class="request-package"  method="post" action="contact.php">-->
+                    <form class="package-request" id="contact-form" method="post" action="contact.php" role="form">
+                        <div class="messages"></div>
+                        <div class="form-group">
+                            <h4 class="search-input-label">Firstname and Lastname *</h4>
+                            <input id="form_name" type="text" name="name" class="form-control input-accom" placeholder="Please enter your name *" required="required" data-error="Firstname is required.">
+                            <div class="help-block with-errors"></div>
+                        </div>
+                        <div class="form-group">
+                            <h4 class="search-input-label">Email *</h4>
+                            <input id="form_email" type="email" name="email" class="form-control input-accom" placeholder="Please enter your email *" required="required" data-error="Valid email is required.">
+                            <div class="help-block with-errors"></div>
+                        </div>
+                        <div class="form-group">
+                            <h4 class="search-input-label">Phone</h4>
+                            <input id="form_phone" type="tel" name="phone" class="form-control input-accom" placeholder="Please enter your phone">
+                            <div class="help-block with-errors"></div>
+                        </div>
+                        <div class="form-group">
+                            <h4 class="search-input-label">Number of Pax</h4>
+                            <input id="form_pax" type="text" name="pax" class="form-control input-accom" placeholder="Please enter your phone">
+                            <div class="help-block with-errors"></div>
+                        </div>
+                        <div class="form-group">
+                            <h4 class="search-input-label">Check In</h4>
+                            <datepicker date-format="yyyy-MM-dd">
+                                <input class="input-accom" ng-model="accomodation.checkIn" type="text" name="chk-in" required/>
+                            </datepicker>
+                        </div>
+                        <div class="form-group">
+                            <h4 class="search-input-label">Check Out</h4>
+                            <datepicker date-format="yyyy-MM-dd">
+                                <input class="input-accom" ng-model="accomodation.checkOut" type="text" name="chk-out" required/>
+                            </datepicker>
+                        </div>
+                        <div class="form-group">
+                            <h4 class="search-input-label">Exra Info *</h4>
+                            <textarea id="form_message" name="message" class="form-control" placeholder="Message for me *" rows="4" required="required" data-error="Please,leave us a message."></textarea>
+                            <div class="help-block with-errors"></div>
+                        </div>
+                        <input type="submit" class="btn btn-success btn-send request-btn" value="Send message">
+                    </form>
+                </div>
+            </div>
+
+            <div class="sidebar-section-2" ng-if="service.product === 'Excursion'">
+                <div>
+                    <!--<h2 class="tour-request">Book this tour</h2>-->
+                    <!--<form class="request-package"  method="post" action="contact.php">-->
+                    <form class="package-request" id="contact-form" ng-submit="book(form, service)">
+                        <div class="form-group">
+                            <h4 class="search-input-label">Select Month</h4>
+                            <select name="month" class="miniform" ng-model="form.month" ng-required="required">
+                                <option value=" 04 ">April</option>
+                                <option value="05 ">May</option>
+                                <option value="06 ">June</option>
+                                <option value="07 ">July</option>
+                                <option value="08 ">August</option>
+                                <option value="09 ">September</option>
+                                <option value="10 ">Octomber</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-md-6 ">
+                            <h4 class="search-input-label ">Adults</h4>
+                            <select name="month " class="miniform " ng-model="form.adults " required>
+                                <option ng-repeat="adult in adults track by $index " value="{{$index}} " >{{$index}}</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-md-6 ">
+                            <h4 class="search-input-label ">Children</h4>
+                            <select name="year " class="miniform " ng-change="getChildrenCount(form.children) " ng-model="form.children " required>
+                                <option ng-repeat=" child in children track by $index " value="{{$index}} " >{{$index}}</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group " ng-repeat="child in childrenCount ">
+                            <h4 class="search-input-label ">Child {{$index + 1 }} Age</h4>
+                            <input class="form-control input-accom " ng-model="childrenAges[$index] " required>
+                            <div class="help-block with-errors "></div>
+                        </div>
+
+                        <input type="submit" class="btn btn-success btn-send request-btn " value="Book Now ">
+                    </form>
+                </div>
+            </div>
+            <!-- SIDEBAR -->
+        </div>
+        <!-- CONTAINER -->
+    </div>
+    <!-- SECTION -->
+
+
+
+    <!-- Modal -->
+    <div class="modal fade " id="myModal " tabindex="-1 " role="dialog " aria-labelledby="myModalLabel ">
+        <div class="modal-dialog modal-lg " role="document ">
+            <div class="modal-content ">
+                <div class="modal-header ">
+                    <button type="button " class="close " data-dismiss="modal " aria-label="Close "><span aria-hidden="true ">&times;</span></button>
+                    <h4 class="modal-title " id="myModalLabel ">{{service.title}}</h4>
+                </div>
+                <div class="modal-body ">
+                    <img class="img-responsive img-service-header " ng-src="http://my.twenty-one.co/uploads/services/{{service.images[modalImage].fileName}} " alt=" ">
+                    <i class="glyphicon glyphicon-chevron-left " ng-click="goBack() "></i>
+                    <i class="glyphicon glyphicon-chevron-right " ng-click="goForward() "></i>
+                </div>
+            </div>
+        </div>
+    </div>

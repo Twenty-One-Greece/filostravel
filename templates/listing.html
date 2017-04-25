@@ -1,0 +1,277 @@
+
+    <!-- Header Carousel -->
+    <div class="test">
+        test
+    </div>
+
+    <!-- Page Content -->
+    <!--<div class="container-fluid">-->
+
+    
+        
+        <div class="section dest-page-content">
+            <div class="container container-beta">
+      
+            <div class="tour-section-1">
+                            
+                <div class="tour-list-intro">
+                    <h2>Small Group Tours</h2>
+                    <p>Whether you’re hiking a forest trail or whale watching, the local insight you’ll get from a guide will enrich your experience, as well as taking some of the trip planning off a plate.</p>
+                </div>
+                
+                <div class="row">
+                    <div class="col-md-3">
+
+                        <div class="col-md-12">
+
+                            <h2>Runlevel</h2>
+        <label>PAV</label>
+        <input  type="checkbox" ng-model="Filter.runlevel.PAV" ng-true-value="PAV"  ng-false-value="!PAV" />&nbsp;
+        <label>UAT</label>
+        <input  type="checkbox" ng-model="Filter.runlevel.UAT" ng-true-value="UAT"  ng-false-value="!UAT" />&nbsp;
+        <label>ST</label>
+        <input  type="checkbox" ng-model="Filter.runlevel.ST" ng-true-value="ST"  ng-false-value="!ST"/>
+        <hr />
+        <h2>Runmode</h2>
+        <label>Author</label>
+        <input  type="checkbox" ng-model="Filter.mode.author" ng-true-value="author"  ng-false-value="!author" />&nbsp;
+        <label>Publish</label>
+        <input  type="checkbox" ng-model="Filter.mode.publish" ng-true-value="publish"  ng-false-value="!publish" />
+        <hr />
+        <h2>Environment</h2>
+        <label>Intranet</label>
+        <input  type="checkbox" ng-model="Filter.env.intranet" ng-true-value="intranet"  ng-false-value="!intranet" />&nbsp;
+        <label>Internet</label>
+        <input  type="checkbox" ng-model="Filter.env.internet" ng-true-value="internet"  ng-false-value="!internet" />
+        <hr />
+        <h2>Server list</h2>
+        <table width="100%" cellpadding="5">
+            <tr>
+                <th ng-click="OrderFilter='name'">Name</th>
+                <th ng-click="OrderFilter='runlevel'">Runlevel</th>
+                <th ng-click="OrderFilter='mode'">Runmode</th>
+                <th ng-click="OrderFilter='env'">Environment</th>
+            </tr>
+            <tr ng-repeat="server in servers | searchFilter:Filter.runlevel | searchFilter:Filter.mode | searchFilter:Filter.env | orderBy:OrderFilter">
+                <td>{{server.name}}</td>
+                <td>{{server.runlevel}}</td>
+                <td>{{server.mode}}</td>
+                <td>{{server.env}}</td>
+            </tr>
+        </table>
+
+                            <h2>Destination</h2>
+                            <div>
+                                  <input type="radio" name="gender" value="male"> Male<br>
+                                    <input type="radio" name="gender" value="female"> Female<br>
+                                    <input type="radio" name="gender" value="other"> Other
+                                <button class="btn btn-primary filter-button" data-filter="all">All</button><br>
+                                <button class="btn btn-default filter-button" data-filter="cruises">Thessalonikh</button><br>
+                                <button class="btn btn-default filter-button" data-filter="Sightseeing">Pieria</button><br>
+                                <button class="btn btn-default filter-button" data-filter="Religious">Pella</button>
+                            </div>
+
+                        </div>
+
+                        <div class="col-md-12">
+                            <h2>Tour Type</h2>
+                            <div>
+                                <button class="btn btn-primary filter-button" data-filter="all">All</button><br>
+                                <button class="btn btn-default filter-button" data-filter="cruises">Organized</button><br>
+                                <button class="btn btn-default filter-button" data-filter="Sightseeing">Private</button><br>
+                                
+                            </div>
+
+                        </div>
+
+                        <div class="col-md-12">
+                            <h2>Category</h2>
+                            <div>
+                                <button class="btn btn-primary filter-button" data-filter="all">All</button><br>
+                                <button class="btn btn-default filter-button" data-filter="cruises">Cruises</button><br>
+                                <button class="btn btn-default filter-button" data-filter="Sightseeing">Sailing</button><br>
+                                <button class="btn btn-default filter-button" data-filter="Religious">Couples</button><br>
+                                <button class="btn btn-primary filter-button" data-filter="Family">Family</button><br>
+                                <button class="btn btn-default filter-button" data-filter="cruises">Classical</button><br>
+                                <button class="btn btn-default filter-button" data-filter="Sightseeing">City Break</button><br>
+                                <button class="btn btn-default filter-button" data-filter="Religious">Country Discovery</button><br>
+                                <button class="btn btn-primary filter-button" data-filter="Gastronomy and Wine">Gastronomy and Wine</button><br>
+                                <button class="btn btn-default filter-button" data-filter="cruises">Spa</button><br>
+                                <button class="btn btn-default filter-button" data-filter="Sightseeing">Religious</button><br>
+                                <button class="btn btn-default filter-button" data-filter="Sightseeing">Outdoor Activities</button><br>
+                            </div>
+
+                        </div>
+
+                        <div class="col-md-12">
+                            <h2>Price</h2>
+                            <div>
+                                <button class="btn btn-primary filter-button" data-filter="all">All</button><br>
+                                <button class="btn btn-default filter-button" data-filter="cruises">0 - 100$</button><br>
+                                <button class="btn btn-default filter-button" data-filter="Sightseeing">101 - 200</button><br>
+                                <button class="btn btn-default filter-button" data-filter="Religious">201 - 301</button>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                <br/>
+                <div class="col-md-9">
+                
+                    <div class="col-md-3 filter cruises">
+                        <div class="each-item">
+                            <a href="tour.html">
+                            <img class="port-image" src="http://www.templates4all.com/wp-content/uploads/2011/09/Engon-Joomla-Corporate-Portfolio-Template.jpg"/>
+                            <div class="featured-package-desc featured-package-desc-2">
+
+                                    Whether you're hiking a forest trail or whale watching, the local insight you'll get from a guide
+                                    will enrich your experience
+
+                                <div class="carousel-footer">
+                                    <span class="carousel-footer-1">1 Day</span>
+                                    <span class="carousel-footer-2">1 Person</span>
+
+                                </div>
+
+                            </div>
+                            </a>
+                            
+                            
+                        </div>
+                        
+                    </div>
+                    
+                    <!--<div class="col-md-3 filter graphic Sightseeing">
+                        <div class="each-item">
+                            <a href="tour.html">
+                            <img class="port-image" src="http://www.wpchats.com/wp-content/uploads/2011/11/Mixfolio-Wordpress-HTML5-Portfolio-Theme.jpg"/>
+                            </a>
+                            
+                        </div>
+                    </div>
+                    -->
+                    <div class="col-md-3 filter cruises">
+                        <div class="each-item">
+                            <a href="tour.html">
+                            <img class="port-image" src="http://danielsitek.cz/pic/small/daniel-sitek-portfolio_small.jpg"/>
+                            <div class="featured-package-desc featured-package-desc-2">
+
+                                    Whether you're hiking a forest trail or whale watching, the local insight you'll get from a guide
+                                    will enrich your experience
+
+                                <div class="carousel-footer">
+                                    <span class="carousel-footer-1">1 Day</span>
+                                    <span class="carousel-footer-2">1 Person</span>
+
+                                </div>
+
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-3 filter Sightseeing">
+                        <div class="each-item">
+                            <a href="tour.html">
+                            <img class="port-image" src="http://101bestwebsites.com/public/images/entry_images//2009/05/14/medium_www.matthiasdittrich.com.jpg">
+                            <div class="featured-package-desc featured-package-desc-2">
+
+                                    Whether you're hiking a forest trail or whale watching, the local insight you'll get from a guide
+                                    will enrich your experience
+
+                                <div class="carousel-footer">
+                                    <span class="carousel-footer-1">1 Day</span>
+                                    <span class="carousel-footer-2">1 Person</span>
+
+                                </div>
+
+                            </div>
+                            </a>                            
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-3 filter Religious">
+                        <div class="each-item">
+                            <a href="tour.html">
+                            <img class="port-image" src="http://paperhaus.com/images/products/shrapnel-design-handmade-double-thick-screwpost-portfolio-cover-11x14-landscape-black-anodized-aluminum-14231_detail.jpg"/>
+                            <div class="featured-package-desc featured-package-desc-2">
+
+                                    Whether you're hiking a forest trail or whale watching, the local insight you'll get from a guide
+                                    will enrich your experience
+
+                                <div class="carousel-footer">
+                                    <span class="carousel-footer-1">1 Day</span>
+                                    <span class="carousel-footer-2">1 Person</span>
+
+                                </div>
+
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-3 filter Religious">
+                        <div class="each-item">
+                            <a href="tour.html">
+                            <img class="port-image" src="http://4.bp.blogspot.com/_IDQ_mBDYk9I/SsON_Or-mGI/AAAAAAAAAEs/0AchAjEekYU/s400/Portfolio-idea-3.jpg"/>
+                            <div class="featured-package-desc featured-package-desc-2">
+
+                                    Whether you're hiking a forest trail or whale watching, the local insight you'll get from a guide
+                                    will enrich your experience
+
+                                <div class="carousel-footer">
+                                    <span class="carousel-footer-1">1 Day</span>
+                                    <span class="carousel-footer-2">1 Person</span>
+
+                                </div>
+
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+                
+
+<script type="text/javascript">
+$(document).ready(function(){
+
+    $(".filter-button").click(function(){
+        var value = $(this).attr('data-filter');
+        
+        if(value == "all")
+        {
+            //$('.filter').removeClass('hidden');
+            $('.filter').show('1000');
+        }
+        else
+        {
+//            $('.filter[filter-item="'+value+'"]').removeClass('hidden');
+//            $(".filter").not('.filter[filter-item="'+value+'"]').addClass('hidden');
+            $(".filter").not('.'+value).hide('3000');
+            $('.filter').filter('.'+value).show('3000');
+            
+        }
+    });
+
+});
+</script>
+                    
+
+                
+            </div><!-- CONTAINER -->
+        </div><!-- SECTION -->
+
+        <!-- Portfolio Item Row -->
+       
+        <!-- /.row -->
+
+        <!-- Related Projects Row -->
+        
+        <!-- /.row -->
+
+        <!-- Footer -->
+      
+
+    </div>

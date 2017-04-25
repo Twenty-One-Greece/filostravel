@@ -1,0 +1,79 @@
+<!-- Header Carousel -->
+<div class="test">
+    <img class="destinatio-header-img" ng-src="http://my.twenty-one.co/uploads/destinations/{{destination.images[destination.featuredImage].fileName}}" alt="">
+    <div class="leukh-fasa-dest"></div>
+    <div class="container container-beta container-beta-2">
+        <h1 class="page-header-dest">{{destination.title}}</h1>
+    </div>
+</div>
+
+<div class="section dest-page-content">
+    <div class="container container-beta container-beta-2">
+        <div class="row dest-row">
+            <div class="col-md-8 main-page-content main-page-dest-content">
+                <div class="page-intro">
+                    <h1 class="page-header">Welcome to {{destination.title}}</h1>
+                    <p class="intro-text">{{destination.description}}</p>
+                </div>
+                <div class="destination-sights" ng-show="destination.images">
+                    <h4 class="sights-h4">Sights</h4>
+                    <hr>
+                    <div class="col-md-12 col-xs-12 regular">
+                        <slick ng-if="destination" settings="slickConfig" infinite="true" slides-to-show="1" slides-to-scroll="1">
+                            <div class="slick-img-carousel" ng-repeat="image in destination.images">
+                                <img class=" img-responsive-slick-carousel slick-img" ng-src='http://my.twenty-one.co/uploads/destinations/{{image.fileName}}'>
+                            </div>
+                        </slick>
+                    </div>
+                    <!--<div class="row">
+                    <div class="col-sm-4 service-img" ng-repeat="image in destination.images">
+                                    <img class="img-responsive tour-images" ng-src='http://my.twenty-one.co/uploads/destinations/{{image.fileName}}' alt="" />
+                                </div>
+                    </div>-->
+                </div>
+
+                <div class="related-tours">
+                    <h1 class="related-tours-h1">Popular Excursions</h1>
+                    <div class="row is-flex">
+                        <div class="col-sm-4 col-xs-12" ng-repeat="tour in tours" ng-if="$index < 3">
+                            <h4 class="dest-popular-tours">{{tour.title}}</h4>
+                            <a href="#/service/{{tour._id}}">
+                                <img class="img-responsive img-hover img-related img-rounded" ng-src="http://my.twenty-one.co/uploads/services/{{tour.images[0].fileName}}" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- MAIN CONTENT -->
+
+            <!-- SIDEBAR -->
+            <div class="col-md-3 dest-sidebar">
+                <div class="row dest-sidebar-section">
+                    <div class="col-sm-12 excursion-submit-button exc-sub-but-2">
+                        <a class="btn btn-primary filter-button filter-button-2" href="/#/services/Excursion/{{search.destination}}">Search for Excursions in {{search.destination}}</a>
+                    </div>
+                </div>
+                <div class="row dest-sidebar-section">
+                    <div class="col-sm-12 why-book-with-us">
+                        <h3 class="search-tab-title search-tab-title2">Why Book With Us</h3>
+                        <hr class="dest-sidebar-hr">
+                        <h4 class="why-book-with-us-sub-title">Professional</h4>
+                        <p class="why-book-with-us-p">
+                            Specialised company in incoming Travel Services in Northern Greece.
+                        </p>
+                        <h4 class="why-book-with-us-sub-title">Transfers</h4>
+                        <p class="why-book-with-us-p">
+                            Own Fleet of Buses and Mini Vans
+                        </p>
+                        <h4 class="why-book-with-us-sub-title">Multilingual</h4>
+                        <p class="why-book-with-us-p">
+                            Multilingual personnel and guides, organizing excursions in 4 languages
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- CONTAINER -->
+</div>
+<!-- SECTION -->

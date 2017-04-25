@@ -1,0 +1,18 @@
+{
+  "name": "filostravelpamedunata",
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-slick": "^0.2.1",
+    "angularjs-datepicker": "^2.1.17"
+  }
+}

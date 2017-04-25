@@ -1,0 +1,166 @@
+<!-- Header Carousel -->
+<header id="myCarousel" class="carousel slide services">
+    <div class="carousel-inner">
+        <div class="item active">
+            <div class="fill" style="background-image:url('images/slider/5.jpeg');"></div>
+            <div class="carousel-caption">
+                <h2>Discover Northern Greece</h2>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+<!-- Page Content -->
+<div class="section dest-page-content">
+    <div class="container container-beta-v2">
+        <div class="row results-row">
+
+            <!-- Button trigger modal -->
+            <button type="button" ng-if="!filtersOpen" class="btn filters-btn btn-default btn-lg " data-toggle="modal" data-target="#myModal">
+            <i class="glyphicon glyphicon-menu-hamburger"></i>
+            Filter Results
+            </button>
+
+            <br><br>
+            <div class="clearfix"></div>
+
+            <div class="col-md-2 filter-col" ng-if="filtersOpen">
+                <!--Filters-->
+                <h3 class="filter-heading filter-master-heading">Filter your Results</h3>
+                <!--{{filters.type}} {{filters.category}} {{filters.price}} {{filters.destination}}-->
+
+                <h4 class="filter-heading " ng-init="filters.price">Price {{filters.priceMin}} - {{filters.priceMax}}</h4>
+                <div>
+                    <div range-slider min="0" max="priceMaxCap" model-min="filters.priceMin" model-max="filters.priceMax" disabled="false"></div>
+                </div>
+
+                <hr class="filter-hr">
+                <h4 class="filter-heading" ng-init="filters.type">Type</h4>
+                <ul class="filters">
+                    <li class="filter-li-item" ng-click="filters.type = 'Organised'"><input type="checkbox" class="checkbox-tsibi" ng-checked="filters.type === 'Organised'"> <span class="filter-text"> <span class="filter-text"> Organised </span> </li>
+                    <li class="filter-li-item" ng-click="filters.type = 'Private'"><input type="checkbox" class="checkbox-tsibi" ng-checked="filters.type === 'Private'"> <span class="filter-text"> Private </span></li>
+                </ul>
+
+                <hr class="filter-hr">
+                <h4 class="filter-heading" ng-init="filters.category">Category</h4>
+                <ul class="filters">
+                    <li class="filter-li-item" ng-click="filters.category = 'Cruise'"><input type="checkbox" class="checkbox-tsibi" ng-checked="filters.category === 'Cruise'"> <span class="filter-text">Cruise</span></li>
+                    <li class="filter-li-item" ng-click="filters.category = 'Sailing'"><input type="checkbox" class="checkbox-tsibi" ng-checked="filters.category === 'Sailing'"> <span class="filter-text">Sailing</span></li>
+                    <li class="filter-li-item" ng-click="filters.category = 'Couples'"><input type="checkbox" class="checkbox-tsibi" ng-checked="filters.category === 'Couples'"> <span class="filter-text">Couples</span></li>
+                    <li class="filter-li-item" ng-click="filters.category = 'Family'"><input type="checkbox" class="checkbox-tsibi" ng-checked="filters.category === 'Family'"> <span class="filter-text">Family</span></li>
+                    <li class="filter-li-item" ng-click="filters.category = 'Classical'"><input type="checkbox" class="checkbox-tsibi" ng-checked="filters.category === 'Classical'"> <span class="filter-text">Classical</span></li>
+                    <li class="filter-li-item" ng-click="filters.category = 'City Break'"><input type="checkbox" class="checkbox-tsibi" ng-checked="filters.category === 'City Break'"> <span class="filter-text">City Break</span></li>
+                    <li class="filter-li-item" ng-click="filters.category = 'Country Discovery'"><input type="checkbox" class="checkbox-tsibi" ng-checked="filters.category === 'Country Discovery'"> <span class="filter-text">Country Discovery</li>
+                    <li class="filter-li-item" ng-click="filters.category = 'Gastronomy and Wine'"><input type="checkbox" class="checkbox-tsibi" ng-checked="filters.category === 'Gastronomy and Wine'"> <span class="filter-text">Gastronomy and Wine</span></li>
+                    <li class="filter-li-item" ng-click="filters.category = 'Spa'"><input type="checkbox" class="checkbox-tsibi" ng-checked="filters.category === 'Spa'"> <span class="filter-text">Spa</span></li>
+                    <li class="filter-li-item" ng-click="filters.category = 'Religious'"><input type="checkbox" class="checkbox-tsibi" ng-checked="filters.category === 'Religious'"> <span class="filter-text">Religious</span></li>
+                    <li class="filter-li-item" ng-click="filters.category = 'Outdoor Activities'"><input type="checkbox" class="checkbox-tsibi" ng-checked="filters.category === 'Outdoor Activities'"> <span class="filter-text">Outdoor Activities</span></li>
+                </ul>
+
+                <!--<hr class="filter-hr">
+                <h4 class="filter-heading" ng-init="filters.destination">Destination</h4>
+                <ul class="filters">
+                    <li class="filter-li-item" ng-repeat="destination in destinations" ng-click="filters.destination = destination.title"><input type="checkbox" class="checkbox-tsibi" ng-checked="filters.destination === destination.title"><span class="filter-text"> {{destination.title}}</span></li>
+                </ul>-->
+            </div>
+
+
+            <div class="col-md-9 content-col" ng-repeat="service in services" ng-show="
+            (filters.type === service.type || !filters.type) &&
+            (service.category.indexOf(filters.category) > -1 || !filters.category) &&
+            (service.price <= filters.priceMax || !filters.priceMax) &&
+            (service.price >= filters.priceMin || !filters.priceMin) &&
+            (filters.destination === service.from || filters.destination === service.to || !filters.destination)">
+
+                <div class="row list-row">
+                    <div class="col-md-4 listing-img">
+                        <img class="img-responsive img-exc-listing" ng-src='http://my.twenty-one.co/uploads/services/{{service.images[0].fileName}}' alt="" />
+                    </div>
+                    <div class="col-md-8 content-col-asdf">
+                        <div class="col-md-8">
+                            <h4 class="excursion-title excursion-title-2"> {{service.title}} </h4>
+                            <hr class="hr1">
+                            <div class="category-section-list">
+                                Type: {{service.type}}
+                                <br> Category: <span ng-repeat="cat in service.category">{{cat}} &nbsp;</span>
+                            </div>
+                            <hr class="hr1">
+                            <div class="category-section-list">
+                                Departure days: <span ng-repeat="day in service.departureDays">{{day}} &nbsp;</span>
+                            </div>
+                        </div>
+                        <div class="col-md-4 content-sidebar">
+                            <div class="duration">
+                                <div class="class15"> {{service.duration}}</div>
+                            </div>
+                            <div class="excursion-price">Starting at:
+                                <span class="price-exc-list"> {{service.price}}€ </span>
+                                <!--<span ng-if="service.offer" class="price-exc-list"> SPECIAL OFFER </span>-->
+                            </div>
+                            <div class="see-more">
+                                <a href="/#/service/{{service._id}}" class="btn see-more-btn">
+                                See More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--mdoal for filters-->
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Filters</h4>
+                </div>
+                <div class="modal-body">
+                    <!--Filters-->
+                    <h3 class="filter-heading filter-master-heading">Filter your Results</h3>
+                    <!--{{filters.type}} {{filters.category}} {{filters.price}} {{filters.destination}}-->
+
+                    <h4 class="filter-heading " ng-init="filters.price">Price {{filters.priceMin}} - {{filters.priceMax}}</h4>
+                    <div>
+                        <div range-slider min="0" max="priceMaxCap" model-min="filters.priceMin" model-max="filters.priceMax" disabled="false"></div>
+                    </div>
+
+                    <hr class="filter-hr">
+                    <h4 class="filter-heading" ng-init="filters.type">Type</h4>
+                    <ul class="filters">
+                        <li class="filter-li-item" ng-click="filters.type = 'Organised'"><input type="checkbox" class="checkbox-tsibi" ng-checked="filters.type === 'Organised'"> <span class="filter-text"> <span class="filter-text"> Organised </span> </li>
+                        <li class="filter-li-item" ng-click="filters.type = 'Private'"><input type="checkbox" class="checkbox-tsibi" ng-checked="filters.type === 'Private'"> <span class="filter-text"> Private </span></li>
+                    </ul>
+
+                    <hr class="filter-hr">
+                    <h4 class="filter-heading" ng-init="filters.category">Category</h4>
+                    <ul class="filters">
+                        <li class="filter-li-item" ng-click="filters.category = 'Cruise'"><input type="checkbox" class="checkbox-tsibi" ng-checked="filters.category === 'Cruise'"> <span class="filter-text">Cruise</span></li>
+                        <li class="filter-li-item" ng-click="filters.category = 'Sailing'"><input type="checkbox" class="checkbox-tsibi" ng-checked="filters.category === 'Sailing'"> <span class="filter-text">Sailing</span></li>
+                        <li class="filter-li-item" ng-click="filters.category = 'Couples'"><input type="checkbox" class="checkbox-tsibi" ng-checked="filters.category === 'Couples'"> <span class="filter-text">Couples</span></li>
+                        <li class="filter-li-item" ng-click="filters.category = 'Family'"><input type="checkbox" class="checkbox-tsibi" ng-checked="filters.category === 'Family'"> <span class="filter-text">Family</span></li>
+                        <li class="filter-li-item" ng-click="filters.category = 'Classical'"><input type="checkbox" class="checkbox-tsibi" ng-checked="filters.category === 'Classical'"> <span class="filter-text">Classical</span></li>
+                        <li class="filter-li-item" ng-click="filters.category = 'City Break'"><input type="checkbox" class="checkbox-tsibi" ng-checked="filters.category === 'City Break'"> <span class="filter-text">City Break</span></li>
+                        <li class="filter-li-item" ng-click="filters.category = 'Country Discovery'"><input type="checkbox" class="checkbox-tsibi" ng-checked="filters.category === 'Country Discovery'"> <span class="filter-text">Country Discovery</li>
+                    <li class="filter-li-item" ng-click="filters.category = 'Gastronomy and Wine'"><input type="checkbox" class="checkbox-tsibi" ng-checked="filters.category === 'Gastronomy and Wine'"> <span class="filter-text">Gastronomy and Wine</span></li>
+                        <li class="filter-li-item" ng-click="filters.category = 'Spa'"><input type="checkbox" class="checkbox-tsibi" ng-checked="filters.category === 'Spa'"> <span class="filter-text">Spa</span></li>
+                        <li class="filter-li-item" ng-click="filters.category = 'Religious'"><input type="checkbox" class="checkbox-tsibi" ng-checked="filters.category === 'Religious'"> <span class="filter-text">Religious</span></li>
+                        <li class="filter-li-item" ng-click="filters.category = 'Outdoor Activities'"><input type="checkbox" class="checkbox-tsibi" ng-checked="filters.category === 'Outdoor Activities'"> <span class="filter-text">Outdoor Activities</span></li>
+                    </ul>
+
+                    <hr class="filter-hr">
+                    <h4 class="filter-heading" ng-init="filters.destination">Destination</h4>
+                    <ul class="filters">
+                        <li class="filter-li-item" ng-repeat="destination in destinations" ng-click="filters.destination = destination.title"><input type="checkbox" class="checkbox-tsibi" ng-checked="filters.destination === destination.title"><span class="filter-text"> {{destination.title}}</span></li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>

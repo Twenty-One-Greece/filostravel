@@ -1,0 +1,20 @@
+@CHARSET "UTF-8";
+
+body {
+	line-height: 1.6em;
+	padding: 50px 0;
+}
+a, a:active, a:focus, a:visited {
+	outline: none !important;
+}
+.gallery_nav {
+	margin: 25px 0;
+}
+
+#items > section {
+	margin: 20px 0;
+}
+#items > section a {
+	display: block;
+	position: relative;
+}
