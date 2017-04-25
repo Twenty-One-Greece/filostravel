@@ -227,17 +227,17 @@
 
 
     <!-- Modal -->
-    <div class="modal fade " id="myModal " tabindex="-1 " role="dialog " aria-labelledby="myModalLabel ">
-        <div class="modal-dialog modal-lg " role="document ">
-            <div class="modal-content ">
-                <div class="modal-header ">
-                    <button type="button " class="close " data-dismiss="modal " aria-label="Close "><span aria-hidden="true ">&times;</span></button>
-                    <h4 class="modal-title " id="myModalLabel ">{{service.title}}</h4>
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">{{service.title}}</h4>
                 </div>
-                <div class="modal-body ">
-                    <img class="img-responsive img-service-header " ng-src="http://my.twenty-one.co/uploads/services/{{service.images[modalImage].fileName}} " alt=" ">
-                    <i class="glyphicon glyphicon-chevron-left " ng-click="goBack() "></i>
-                    <i class="glyphicon glyphicon-chevron-right " ng-click="goForward() "></i>
+                <div class="modal-body">
+                    <img class="img-responsive img-service-header" ng-src="http://my.twenty-one.co/uploads/services/{{service.images[modalImage].fileName}}" alt="">
+                    <i class="axarrow-left glyphicon glyphicon-chevron-left" ng-click="goBack()"></i>
+                    <i class="axarrow-right glyphicon glyphicon-chevron-right" ng-click="goForward()"></i>
                 </div>
             </div>
         </div>

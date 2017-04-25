@@ -108,6 +108,9 @@ app.controller('destinationInfoController', function($scope, $http, $routeParams
         .then(function(response) {
             $scope.destination = response.data
             $scope.search.destination = $scope.destination.title
+
+            $http.get(API + "services-destination-from-to/" + filosID + '/Excursion/' + $scope.destination.title)
+            .then(function(response) { $scope.tours = response.data });
         });
 
     $http.get(API + "services-product-featured/" + filosID + '/Excursion')
@@ -157,6 +160,18 @@ app.controller('serviceInfoController', function($scope, $http, $routeParams) {
 
     $http.get(API + "service-one/" + $routeParams.serviceID)
         .then(function(response) { $scope.service = response.data });
+
+        $scope.getImageIndex = function(i) { $scope.modalImage = i }
+
+    $scope.goBack = function(i) {
+        if ($scope.modalImage === 0) return $scope.modalImage = $scope.service.images.length - 1
+            --$scope.modalImage
+    }
+
+    $scope.goForward = function(i) {
+        if ($scope.modalImage === $scope.service.images.length - 1) return $scope.modalImage = 0
+            ++$scope.modalImage
+    }
 
     $scope.book = function(form, service) {
         var childrenAges = $scope.makeChildrenAgesString($scope.childrenAges)
